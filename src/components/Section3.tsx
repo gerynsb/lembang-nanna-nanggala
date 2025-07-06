@@ -28,12 +28,12 @@ export default function Section3() {
             dalam Dunia Digital
           </h2>
           <blockquote className="text-gray-700 mb-10 text-base leading-relaxed border-l-4 border-green-600 pl-6 py-2">
-            "Digitalisasi mampu membuka peluang yang lebih besar,
+            &ldquo;Digitalisasi mampu membuka peluang yang lebih besar,
             Lembang Nanna adalah sebuah desa yang memiliki berbagai
             kekayaan alam yang melimpah serta tradisi yang
             menggambarkan keunikan Toraja. Perpaduan antara
             keduanya memberikan daya tarik yang luar biasa guna
-            mengunjungi desa ini."
+            mengunjungi desa ini.&rdquo;
           </blockquote>
 
           <Link href="#tentang">

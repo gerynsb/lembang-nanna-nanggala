@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     "Toraja", "Toraja Utara", "Nanggala", "Lembang Nanna", "Desa Wisata", "Website Desa", "KKN Unhas"
   ],
   authors: [{ name: "Mahasiswa KKN Unhas" }],
+  metadataBase: new URL('https://lembang-nanna.vercel.app'),
   icons: {
     icon: "/images/logo/logo-resize.png", 
   },
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     title: "Lembang Nanna - Toraja Utara",
     description: "Portal informasi resmi Lembang Nanna Nanggala, Toraja Utara.",
     
-    url: "https://nama-domain-mu.vercel.app",
+    url: "https://lembang-nanna.vercel.app",
     siteName: "Lembang Nanna",
     
     images: [

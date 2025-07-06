@@ -11,10 +11,6 @@ export default function Hero() {
     scrollToElement('sectionLokasi');
   };
 
-  const handlePelajariClick = () => {
-    scrollToElement('hero');
-  };
-
   return (
     <section
       id="hero"
@@ -54,14 +50,14 @@ export default function Hero() {
           </button>
         </div>
         
-        {/* <div className="mt-6">
+        <div className="mt-6">
           <button 
-            onClick={handlePelajariClick}
+            onClick={() => scrollToElement('hero')}
             className="text-white underline hover:text-blue-300 transition-colors"
           >
             Pelajari Lebih Lanjut
           </button>
-        </div> */}
+        </div>
       </div>
     </section>
   );

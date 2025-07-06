@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Phone, MapPin, Instagram, Clock } from "lucide-react";
+import { Phone, MapPin, Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
