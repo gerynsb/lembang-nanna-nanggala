@@ -12,21 +12,24 @@ import SectionHubungi from "@/components/SectionHubungi";
 import Sectionkknt114 from "@/components/Sectionkknt114";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import JsonLd from "@/components/JsonLd";
 
 
 // ✅ Metadata SEO
 export const metadata: Metadata = {
-  title: "Lembang Nanna Nanggala - Toraja Utara",
-  description: "Website resmi Lembang Nanna Nanggala, Kecamatan Nanggala, Kabupaten Toraja Utara. Dikelola oleh Mahasiswa KKN Unhas.",
+  title: "Lembang Nanna Nanggala - Wisata Budaya & Alam Toraja Utara",
+  description: "Jelajahi keindahan alam dan kekayaan budaya di Lembang Nanna Nanggala, Toraja Utara. Nikmati wisata budaya tradisional, kuliner khas, dan pemandangan alam yang menakjubkan.",
   keywords: [
-    "Toraja", "Toraja Utara", "Nanggala", "Lembang Nanna", "Desa Wisata", "Website Desa", "KKN Unhas"
+    "Toraja", "Toraja Utara", "Nanggala", "Lembang Nanna", "Desa Wisata", "Wisata Budaya Toraja", 
+    "Objek Wisata Toraja", "Tradisi Toraja", "Upacara Rambu Solo", "Destinasi Wisata Sulawesi Selatan",
+    "KKN Unhas", "Tongkonan", "Wisata Alam Toraja"
   ],
   authors: [{ name: "Mahasiswa KKN Unhas" }],
-  metadataBase: new URL('https://lembang-nanna.vercel.app'),
+  metadataBase: new URL('https://lembang-nanna-nanggala.vercel.app'),
   openGraph: {
     title: "Lembang Nanna - Toraja Utara",
     description: "Portal informasi resmi Lembang Nanna Nanggala, Toraja Utara.",
-    url: "https://lembang-nanna.vercel.app",
+    url: "https://lembang-nanna-nanggala.vercel.app",
     siteName: "Lembang Nanna",
     images: [
       {
@@ -47,6 +50,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      <JsonLd />
       <Hero />
       <Section2 />
       <Section3 />

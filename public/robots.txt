@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lembang-nanna-nanggala.vercel.app/sitemap.xml
