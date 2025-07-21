@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "Toraja", "Toraja Utara", "Nanggala", "Lembang Nanna", "Desa Wisata", "Website Desa", "KKN Unhas"
   ],
   authors: [{ name: "Mahasiswa KKN Unhas" }],
-  metadataBase: new URL('https://lembang-nanna-nanggala.vercel.app'),
+                                                                                                        metadataBase: new URL('https://lembang-nanna-nanggala.vercel.app'),
   icons: {
     icon: "/images/logo/logo-resize.png", 
   },
@@ -56,7 +56,7 @@ export default function RootLayout({
   return (
     <html lang="id">
       <head>
-        <link rel="canonical" href="https://lembang-nanna-nanggala.vercel.app/" />
+        <link rel="canonical" href="https://lembangnanna.online/" />
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body
