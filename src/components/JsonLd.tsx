@@ -12,7 +12,7 @@ export default function JsonLd() {
       "@type": "TouristAttraction",
       "name": "Lembang Nanna Nanggala",
       "description": "Desa wisata dengan kekayaan alam dan budaya tradisional Toraja",
-      "url": "https://lembang-nanna-nanggala.vercel.app",
+      "url": "https://lembangnanna.online",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Kecamatan Nanggala",
@@ -24,12 +24,12 @@ export default function JsonLd() {
         "latitude": "3.0286",
         "longitude": "119.9177"
       },
-      "image": "https://lembang-nanna-nanggala.vercel.app/images/logo/logo.png",
+      "image": "https://lembangnanna.online/images/logo/Logo-resize.png",
       "potentialAction": {
         "@type": "Action",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": "https://lembang-nanna-nanggala.vercel.app/#sectionHubungi"
+          "urlTemplate": "https://lembangnanna.online/#sectionHubungi"
         },
         "name": "Hubungi Kami"
       }

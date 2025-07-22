@@ -16,7 +16,7 @@ export default function Navbar() {
           onClick={() => scrollToTop()}
         >
           <Image
-            src="/images/logo/logo-torut.png"
+            src="/images/logo/Logo-resize.png"
             alt="Logo Desa"
             width={40}
             height={40}
