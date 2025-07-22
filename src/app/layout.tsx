@@ -23,9 +23,11 @@ export const metadata: Metadata = {
     "Toraja", "Toraja Utara", "Nanggala", "Lembang Nanna", "Desa Wisata", "Website Desa", "KKN Unhas"
   ],
   authors: [{ name: "Mahasiswa KKN Unhas" }],
-                                                                                                        metadataBase: new URL('https://lembang-nanna-nanggala.vercel.app'),
+  metadataBase: new URL('https://lembangnanna.online'),
   icons: {
-    icon: "/images/logo/logo-resize.png", 
+    icon: "/images/logo/Logo-resize.png",
+    shortcut: "/images/logo/Logo-resize.png",
+    apple: "/images/logo/Logo-resize.png",
   },
 
   openGraph: {
@@ -58,6 +60,13 @@ export default function RootLayout({
       <head>
         <link rel="canonical" href="https://lembangnanna.online/" />
         <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/images/logo/Logo-resize.png" />
+        <link rel="apple-touch-icon" href="/images/logo/Logo-resize.png" />
+        <link rel="shortcut icon" href="/images/logo/Logo-resize.png" />
+        <link rel="mask-icon" href="/images/logo/Logo-resize.png" color="#00052d" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="msapplication-TileColor" content="#00052d" />
+        <meta name="theme-color" content="#ffffff" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
