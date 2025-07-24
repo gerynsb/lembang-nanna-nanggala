@@ -1,5 +1,117 @@
 "use client";
 
+import { useRef, useState, useEffect } from 'react';
+
+// Gallery Component yang bisa di-drag dan auto-scroll
+function DraggableGallery({ images, title }: { images: string[], title: string }) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+
+  // Auto-scroll functionality
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer || isDragging || isHovered) return;
+
+    const scrollWidth = scrollContainer.scrollWidth;
+    const clientWidth = scrollContainer.clientWidth;
+    const maxScroll = scrollWidth - clientWidth;
+
+    const interval = setInterval(() => {
+      if (scrollContainer.scrollLeft >= maxScroll) {
+        scrollContainer.scrollLeft = 0;
+      } else {
+        scrollContainer.scrollLeft += 1;
+      }
+    }, 20);
+
+    return () => clearInterval(interval);
+  }, [isDragging, isHovered]);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!scrollRef.current) return;
+    
+    setIsDragging(true);
+    setStartX(e.pageX - scrollRef.current.offsetLeft);
+    setScrollLeft(scrollRef.current.scrollLeft);
+    scrollRef.current.style.cursor = 'grabbing';
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !scrollRef.current) return;
+    
+    e.preventDefault();
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    scrollRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+    if (scrollRef.current) {
+      scrollRef.current.style.cursor = 'grab';
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+    setIsHovered(false);
+    if (scrollRef.current) {
+      scrollRef.current.style.cursor = 'grab';
+    }
+  };
+
+  return (
+    <div className="relative">
+      <h4 className="text-2xl font-bold text-white text-center mb-8">
+        {title}
+      </h4>
+      
+      <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+        <div 
+          ref={scrollRef}
+          className="flex overflow-x-auto scrollbar-hide cursor-grab select-none"
+          style={{ 
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none'
+          }}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseLeave}
+          onMouseEnter={() => setIsHovered(true)}
+        >
+          {/* Render images multiple times for infinite scroll effect */}
+          {[...Array(3)].map((_, setIndex) => (
+            <div key={setIndex} className="flex">
+              {images.map((image, index) => (
+                <div key={`${setIndex}-${index}`} className="flex-shrink-0 w-80 h-60 mx-2">
+                  <img 
+                    src={image} 
+                    alt={`Dokumentasi ${index + 1}`}
+                    className="w-full h-full object-cover rounded-xl shadow-lg pointer-events-none"
+                    draggable={false}
+                  />
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+        
+        {/* Gradient overlays for smooth edges */}
+        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#00052d] to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#00052d] to-transparent z-10 pointer-events-none"></div>
+      </div>
+      
+      <p className="text-center text-gray-400 mt-4 text-sm">
+        Drag untuk menggeser • Auto-scroll saat tidak di-hover
+      </p>
+    </div>
+  );
+}
+
 export default function SectionAboutNanna() {
   return (
     <section id="about-nanna" className="py-20 bg-gradient-to-br from-blue-50 via-white to-green-50 relative overflow-hidden">
@@ -125,91 +237,14 @@ export default function SectionAboutNanna() {
           </div>
 
           {/* Auto-sliding Gallery */}
-          <div className="relative">
-            <h4 className="text-2xl font-bold text-white text-center mb-8">
-              Galeri Dokumentasi
-            </h4>
-            
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-              <div className="flex animate-[slide_15s_infinite_linear] hover:[animation-play-state:paused]">
-                {/* First set of images */}
-                <div className="flex-shrink-0 w-80 h-60 mx-2">
-                  <img 
-                    src="/images/kknt114/dokumentasi-1.png" 
-                    alt="Dokumentasi 1"
-                    className="w-full h-full object-cover rounded-xl shadow-lg"
-                  />
-                </div>
-                <div className="flex-shrink-0 w-80 h-60 mx-2">
-                  <img 
-                    src="/images/kknt114/dokumentasi-2.png" 
-                    alt="Dokumentasi 2"
-                    className="w-full h-full object-cover rounded-xl shadow-lg"
-                  />
-                </div>
-                <div className="flex-shrink-0 w-80 h-60 mx-2">
-                  <img 
-                    src="/images/kknt114/dokumentasi-3.png" 
-                    alt="Dokumentasi 3"
-                    className="w-full h-full object-cover rounded-xl shadow-lg"
-                  />
-                </div>
-                
-                {/* Duplicate set for seamless loop */}
-                <div className="flex-shrink-0 w-80 h-60 mx-2">
-                  <img 
-                    src="/images/kknt114/dokumentasi-1.png" 
-                    alt="Dokumentasi 1"
-                    className="w-full h-full object-cover rounded-xl shadow-lg"
-                  />
-                </div>
-                <div className="flex-shrink-0 w-80 h-60 mx-2">
-                  <img 
-                    src="/images/kknt114/dokumentasi-2.png" 
-                    alt="Dokumentasi 2"
-                    className="w-full h-full object-cover rounded-xl shadow-lg"
-                  />
-                </div>
-                <div className="flex-shrink-0 w-80 h-60 mx-2">
-                  <img 
-                    src="/images/kknt114/dokumentasi-3.png" 
-                    alt="Dokumentasi 3"
-                    className="w-full h-full object-cover rounded-xl shadow-lg"
-                  />
-                </div>
-                {/* Duplicate set for seamless loop */}
-                <div className="flex-shrink-0 w-80 h-60 mx-2">
-                  <img 
-                    src="/images/kknt114/dokumentasi-1.png" 
-                    alt="Dokumentasi 1"
-                    className="w-full h-full object-cover rounded-xl shadow-lg"
-                  />
-                </div>
-                <div className="flex-shrink-0 w-80 h-60 mx-2">
-                  <img 
-                    src="/images/kknt114/dokumentasi-2.png" 
-                    alt="Dokumentasi 2"
-                    className="w-full h-full object-cover rounded-xl shadow-lg"
-                  />
-                </div>
-                <div className="flex-shrink-0 w-80 h-60 mx-2">
-                  <img 
-                    src="/images/kknt114/dokumentasi-3.png" 
-                    alt="Dokumentasi 3"
-                    className="w-full h-full object-cover rounded-xl shadow-lg"
-                  />
-                </div>
-              </div>
-              
-              {/* Gradient overlays for smooth edges - adjusted for dark background */}
-              <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#00052d] to-transparent z-10"></div>
-              <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#00052d] to-transparent z-10"></div>
-            </div>
-            
-            <p className="text-center text-gray-400 mt-4 text-sm">
-              Galeri akan berhenti saat di-hover
-            </p>
-          </div>
+          <DraggableGallery 
+            images={[
+              "/images/kknt114/dokumentasi-1.png",
+              "/images/kknt114/dokumentasi-2.png", 
+              "/images/kknt114/dokumentasi-3.png"
+            ]}
+            title="Galeri Dokumentasi"
+          />
 
           {/* Dusun Kedua */}
           <div className="mt-20">
@@ -249,93 +284,15 @@ export default function SectionAboutNanna() {
               </div>
             </div>
 
-            {/* Auto-sliding Gallery Dusun Keempat */}
-            <div className="relative">
-              <h4 className="text-2xl font-bold text-white text-center mb-8">
-                Galeri Dokumentasi Dusun Buntu Nanna&apos;
-              </h4>
-              
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <div className="flex animate-[slide_15s_infinite_linear] hover:[animation-play-state:paused]">
-                  {/* First set of images */}
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-1.png" 
-                      alt="Dokumentasi 1"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-2.png" 
-                      alt="Dokumentasi 2"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-3.png" 
-                      alt="Dokumentasi 3"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  
-                  {/* Duplicate set for seamless loop */}
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-1.png" 
-                      alt="Dokumentasi 1"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-2.png" 
-                      alt="Dokumentasi 2"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-3.png" 
-                      alt="Dokumentasi 3"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  
-                  {/* Duplicate set for seamless loop */}
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-1.png" 
-                      alt="Dokumentasi 1"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-2.png" 
-                      alt="Dokumentasi 2"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-3.png" 
-                      alt="Dokumentasi 3"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                </div>
-                
-                {/* Gradient overlays for smooth edges - adjusted for dark background */}
-                <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#00052d] to-transparent z-10"></div>
-                <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#00052d] to-transparent z-10"></div>
-              </div>
-              
-              <p className="text-center text-gray-400 mt-4 text-sm">
-                Galeri akan berhenti saat di-hover
-              </p>
-            </div>
+            {/* Auto-sliding Gallery Dusun Buntu Nanna' */}
+            <DraggableGallery 
+              images={[
+                "/images/kknt114/dokumentasi-1.png",
+                "/images/kknt114/dokumentasi-2.png", 
+                "/images/kknt114/dokumentasi-3.png"
+              ]}
+              title="Galeri Dokumentasi Dusun Buntu Nanna&apos;"
+            />
           </div>
 
           {/* Dusun Ketiga */}
@@ -376,93 +333,15 @@ export default function SectionAboutNanna() {
               </div>
             </div>
 
-            {/* Auto-sliding Gallery Dusun Ketiga */}
-            <div className="relative">
-              <h4 className="text-2xl font-bold text-white text-center mb-8">
-                Galeri Dokumentasi Dusun Buntu Palilli&apos;
-              </h4>
-              
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <div className="flex animate-[slide_15s_infinite_linear] hover:[animation-play-state:paused]">
-                  {/* First set of images */}
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-1.png" 
-                      alt="Dokumentasi 1"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-2.png" 
-                      alt="Dokumentasi 2"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-3.png" 
-                      alt="Dokumentasi 3"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  
-                  {/* Duplicate set for seamless loop */}
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-1.png" 
-                      alt="Dokumentasi 1"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-2.png" 
-                      alt="Dokumentasi 2"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-3.png" 
-                      alt="Dokumentasi 3"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  
-                  {/* Duplicate set for seamless loop */}
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-1.png" 
-                      alt="Dokumentasi 1"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-2.png" 
-                      alt="Dokumentasi 2"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-3.png" 
-                      alt="Dokumentasi 3"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                </div>
-                
-                {/* Gradient overlays for smooth edges - adjusted for dark background */}
-                <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#00052d] to-transparent z-10"></div>
-                <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#00052d] to-transparent z-10"></div>
-              </div>
-              
-              <p className="text-center text-gray-400 mt-4 text-sm">
-                Galeri akan berhenti saat di-hover
-              </p>
-            </div>
+            {/* Auto-sliding Gallery Dusun Buntu Palilli' */}
+            <DraggableGallery 
+              images={[
+                "/images/kknt114/dokumentasi-1.png",
+                "/images/kknt114/dokumentasi-2.png", 
+                "/images/kknt114/dokumentasi-3.png"
+              ]}
+              title="Galeri Dokumentasi Dusun Buntu Palilli&apos;"
+            />
           </div>
 
           {/* Dusun Keempat */}
@@ -503,93 +382,15 @@ export default function SectionAboutNanna() {
               </div>
             </div>
 
-            {/* Auto-sliding Gallery Dusun Keempat */}
-            <div className="relative">
-              <h4 className="text-2xl font-bold text-white text-center mb-8">
-                Galeri Dokumentasi Dusun Saluna&apos;
-              </h4>
-              
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <div className="flex animate-[slide_15s_infinite_linear] hover:[animation-play-state:paused]">
-                  {/* First set of images */}
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-1.png" 
-                      alt="Dokumentasi 1"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-2.png" 
-                      alt="Dokumentasi 2"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-3.png" 
-                      alt="Dokumentasi 3"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  
-                  {/* Duplicate set for seamless loop */}
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-1.png" 
-                      alt="Dokumentasi 1"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-2.png" 
-                      alt="Dokumentasi 2"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-3.png" 
-                      alt="Dokumentasi 3"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  
-                  {/* Duplicate set for seamless loop */}
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-1.png" 
-                      alt="Dokumentasi 1"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-2.png" 
-                      alt="Dokumentasi 2"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-3.png" 
-                      alt="Dokumentasi 3"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                </div>
-                
-                {/* Gradient overlays for smooth edges - adjusted for dark background */}
-                <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#00052d] to-transparent z-10"></div>
-                <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#00052d] to-transparent z-10"></div>
-              </div>
-              
-              <p className="text-center text-gray-400 mt-4 text-sm">
-                Galeri akan berhenti saat di-hover
-              </p>
-            </div>
+            {/* Auto-sliding Gallery Dusun Saluna' */}
+            <DraggableGallery 
+              images={[
+                "/images/kknt114/dokumentasi-1.png",
+                "/images/kknt114/dokumentasi-2.png", 
+                "/images/kknt114/dokumentasi-3.png"
+              ]}
+              title="Galeri Dokumentasi Dusun Saluna&apos;"
+            />
           </div>
 
           {/* Dusun Kelima */}
@@ -630,93 +431,15 @@ export default function SectionAboutNanna() {
               </div>
             </div>
 
-            {/* Auto-sliding Gallery Dusun Keempat */}
-            <div className="relative">
-              <h4 className="text-2xl font-bold text-white text-center mb-8">
-                Galeri Dokumentasi Dusun Buntu Kalando
-              </h4>
-              
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <div className="flex animate-[slide_15s_infinite_linear] hover:[animation-play-state:paused]">
-                  {/* First set of images */}
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-1.png" 
-                      alt="Dokumentasi 1"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-2.png" 
-                      alt="Dokumentasi 2"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-3.png" 
-                      alt="Dokumentasi 3"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  
-                  {/* Duplicate set for seamless loop */}
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-1.png" 
-                      alt="Dokumentasi 1"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-2.png" 
-                      alt="Dokumentasi 2"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-3.png" 
-                      alt="Dokumentasi 3"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  
-                  {/* Duplicate set for seamless loop */}
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-1.png" 
-                      alt="Dokumentasi 1"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-2.png" 
-                      alt="Dokumentasi 2"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-3.png" 
-                      alt="Dokumentasi 3"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                </div>
-                
-                {/* Gradient overlays for smooth edges - adjusted for dark background */}
-                <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#00052d] to-transparent z-10"></div>
-                <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#00052d] to-transparent z-10"></div>
-              </div>
-              
-              <p className="text-center text-gray-400 mt-4 text-sm">
-                Galeri akan berhenti saat di-hover
-              </p>
-            </div>
+            {/* Auto-sliding Gallery Dusun Buntu Kalando */}
+            <DraggableGallery 
+              images={[
+                "/images/kknt114/dokumentasi-1.png",
+                "/images/kknt114/dokumentasi-2.png", 
+                "/images/kknt114/dokumentasi-3.png"
+              ]}
+              title="Galeri Dokumentasi Dusun Buntu Kalando"
+            />
           </div>
 
           {/* Dusun Keenam */}
@@ -757,93 +480,15 @@ export default function SectionAboutNanna() {
               </div>
             </div>
 
-            {/* Auto-sliding Gallery Dusun Keempat */}
-            <div className="relative">
-              <h4 className="text-2xl font-bold text-white text-center mb-8">
-                Galeri Dokumentasi Dusun Tanete
-              </h4>
-              
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <div className="flex animate-[slide_15s_infinite_linear] hover:[animation-play-state:paused]">
-                  {/* First set of images */}
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-1.png" 
-                      alt="Dokumentasi 1"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-2.png" 
-                      alt="Dokumentasi 2"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-3.png" 
-                      alt="Dokumentasi 3"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  
-                  {/* Duplicate set for seamless loop */}
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-1.png" 
-                      alt="Dokumentasi 1"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-2.png" 
-                      alt="Dokumentasi 2"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-3.png" 
-                      alt="Dokumentasi 3"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  
-                  {/* Duplicate set for seamless loop */}
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-1.png" 
-                      alt="Dokumentasi 1"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-2.png" 
-                      alt="Dokumentasi 2"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 w-80 h-60 mx-2">
-                    <img 
-                      src="/images/kknt114/dokumentasi-3.png" 
-                      alt="Dokumentasi 3"
-                      className="w-full h-full object-cover rounded-xl shadow-lg"
-                    />
-                  </div>
-                </div>
-                
-                {/* Gradient overlays for smooth edges - adjusted for dark background */}
-                <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#00052d] to-transparent z-10"></div>
-                <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#00052d] to-transparent z-10"></div>
-              </div>
-              
-              <p className="text-center text-gray-400 mt-4 text-sm">
-                Galeri akan berhenti saat di-hover
-              </p>
-            </div>
+            {/* Auto-sliding Gallery Dusun Tanete */}
+            <DraggableGallery 
+              images={[
+                "/images/kknt114/dokumentasi-1.png",
+                "/images/kknt114/dokumentasi-2.png", 
+                "/images/kknt114/dokumentasi-3.png"
+              ]}
+              title="Galeri Dokumentasi Dusun Tanete"
+            />
           </div>
         </div>
 
