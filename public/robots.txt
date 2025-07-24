@@ -1,4 +1,26 @@
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: https://lembangnanna.online/sitemap.xml
+
+# Crawl-delay untuk menghindari overload
+Crawl-delay: 1
+
+# Allow all search engines to index images
+User-agent: Googlebot-Image
+Allow: /images/
+
+# Specific rules for better indexing
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Allow Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Disallow unnecessary paths (if any)
+# Disallow: /admin/
+# Disallow: /private/

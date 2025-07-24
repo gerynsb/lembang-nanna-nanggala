@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://lembangnanna.online/</loc>
-    <lastmod>2025-07-21</lastmod>
+    <lastmod>2025-01-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <news:news>
+      <news:publication>
+        <news:name>Desa Nanna</news:name>
+        <news:language>id</news:language>
+      </news:publication>
+      <news:publication_date>2025-01-24T00:00:00+00:00</news:publication_date>
+      <news:title>Portal Resmi Desa Nanna - Lembang Nanna Nanggala, Toraja Utara</news:title>
+      <news:keywords>desa nanna, nanna, toraja utara, nanggala, toraja, nanna nanggala, lembang nanna, wisata nanna toraja, budaya nanna, destinasi wisata nanggala</news:keywords>
+    </news:news>
+    <image:image>
+      <image:loc>https://lembangnanna.online/images/logo/Logo-resize.png</image:loc>
+      <image:title>Logo Desa Nanna - Lembang Nanna Nanggala</image:title>
+      <image:caption>Logo resmi Desa Nanna di Toraja Utara</image:caption>
+    </image:image>
   </url>
 </urlset>

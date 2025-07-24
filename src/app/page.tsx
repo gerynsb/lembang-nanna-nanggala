@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Hero from "@/components/Hero";
 import Section2 from "@/components/Section2";
+import SectionAboutNanna from "@/components/SectionAboutNanna";
 import Section3 from "@/components/Section3";
 import Section4 from "@/components/Section4";
 import SectionLokasi from "@/components/SectionLokasi";
@@ -17,31 +18,49 @@ import JsonLd from "@/components/JsonLd";
 
 // ✅ Metadata SEO
 export const metadata: Metadata = {
-  title: "Lembang Nanna Nanggala - Wisata Budaya & Alam Toraja Utara",
-  description: "Jelajahi keindahan alam dan kekayaan budaya di Lembang Nanna Nanggala, Toraja Utara. Nikmati wisata budaya tradisional, kuliner khas, dan pemandangan alam yang menakjubkan.",
+  title: "Desa Nanna | Lembang Nanna Nanggala - Toraja Utara",
+  description: "Desa Nanna di Lembang Nanna Nanggala, Kecamatan Nanggala, Toraja Utara. Portal resmi informasi wisata budaya, tradisi Toraja, dan destinasi unggulan di Nanggala, Sulawesi Selatan.",
   keywords: [
-    "Toraja", "Toraja Utara", "Nanggala", "Lembang Nanna", "Desa Wisata", "Wisata Budaya Toraja", 
-    "Objek Wisata Toraja", "Tradisi Toraja", "Upacara Rambu Solo", "Destinasi Wisata Sulawesi Selatan",
-    "KKN Unhas", "Tongkonan", "Wisata Alam Toraja"
+    // Target utama
+    "desa nanna", "nanna", "toraja utara", "nanggala", "toraja", "nanna nanggala", "lembang nanna",
+    // Long-tail keywords
+    "desa nanna toraja", "nanggala toraja utara", "lembang nanna nanggala", "wisata nanna toraja",
+    "desa wisata nanggala", "tradisi nanna toraja", "budaya nanna", "tongkonan nanna",
+    // Local SEO
+    "kecamatan nanggala", "toraja utara nanggala", "sulawesi selatan nanggala", 
+    "destinasi wisata nanna", "objek wisata nanggala", "rambu solo nanna", "KKN Unhas"
   ],
-  authors: [{ name: "Mahasiswa KKN Unhas" }],
+  authors: [{ name: "Pemerintah Desa Nanna & Mahasiswa KKN Unhas" }],
   metadataBase: new URL('https://lembangnanna.online'),
   openGraph: {
-    title: "Lembang Nanna - Toraja Utara",
-    description: "Portal informasi resmi Lembang Nanna Nanggala, Toraja Utara.",
+    title: "Desa Nanna - Lembang Nanna Nanggala, Toraja Utara",
+    description: "Portal resmi Desa Nanna di Lembang Nanna Nanggala, Kecamatan Nanggala, Toraja Utara. Jelajahi wisata budaya dan tradisi Toraja yang autentik.",
     url: "https://lembangnanna.online",
-    siteName: "Lembang Nanna",
+    siteName: "Desa Nanna",
     images: [
       {
         url: "/images/logo/Logo-resize.png",
-        width: 800,
-        height: 600,
-        alt: "Logo Lembang Nanna",
+        width: 1200,
+        height: 630,
+        alt: "Logo Desa Nanna - Lembang Nanna Nanggala",
       }
     ],
     locale: "id_ID",
     type: "website",
   },
+  // Twitter Cards
+  twitter: {
+    card: "summary_large_image",
+    title: "Desa Nanna - Toraja Utara",
+    description: "Portal resmi Desa Nanna di Lembang Nanna Nanggala, Toraja Utara",
+    images: ["/images/logo/Logo-resize.png"],
+  },
+  // Geo location
+  other: {
+    "geo.region": "ID-SN",
+    "geo.placename": "Nanggala, Toraja Utara",
+    "geo.position": "-3.0;119.8",
+  }
 };
 
 // Make metadata properly typeable with 'use client'
@@ -60,6 +79,7 @@ export default function Home() {
       <SectionProduk />
       <SectionSarana />
       <SectionInfografis />
+      <SectionAboutNanna />
       <SectionHubungi />
       <Sectionkknt114 />
       <Footer />

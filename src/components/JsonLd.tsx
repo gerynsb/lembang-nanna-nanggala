@@ -9,30 +9,99 @@ export default function JsonLd() {
     script.type = "application/ld+json";
     script.text = JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "TouristAttraction",
-      "name": "Lembang Nanna Nanggala",
-      "description": "Desa wisata dengan kekayaan alam dan budaya tradisional Toraja",
-      "url": "https://lembangnanna.online",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Kecamatan Nanggala",
-        "addressRegion": "Toraja Utara",
-        "addressCountry": "Indonesia"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "3.0286",
-        "longitude": "119.9177"
-      },
-      "image": "https://lembangnanna.online/images/logo/Logo-resize.png",
-      "potentialAction": {
-        "@type": "Action",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://lembangnanna.online/#sectionHubungi"
+      "@graph": [
+        {
+          "@type": "Place",
+          "@id": "https://lembangnanna.online/#place",
+          "name": "Desa Nanna",
+          "alternateName": ["Lembang Nanna Nanggala", "Nanna Nanggala", "Desa Nanna Toraja", "Nanggala"],
+          "description": "Desa Nanna terletak di Lembang Nanna Nanggala, Kecamatan Nanggala, Toraja Utara. Destinasi wisata budaya dengan tradisi Toraja yang autentik.",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-3.0",
+            "longitude": "119.8"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Nanggala",
+            "addressRegion": "Toraja Utara",
+            "addressCountry": "ID"
+          },
+          "url": "https://lembangnanna.online",
+          "image": "https://lembangnanna.online/images/logo/Logo-resize.png"
         },
-        "name": "Hubungi Kami"
-      }
+        {
+          "@type": "TouristDestination",
+          "@id": "https://lembangnanna.online/#destination",
+          "name": "Desa Wisata Nanna",
+          "alternateName": ["Lembang Nanna Nanggala", "Wisata Nanna Toraja", "Destinasi Wisata Nanggala"],
+          "description": "Destinasi wisata budaya di Desa Nanna, Toraja Utara dengan tradisi Rambu Solo, Tongkonan, dan keindahan alam khas Nanggala.",
+          "touristType": "Wisata Budaya",
+          "isAccessibleForFree": true,
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-3.0",
+            "longitude": "119.8"
+          },
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Toraja Utara"
+          },
+          "url": "https://lembangnanna.online",
+          "image": "https://lembangnanna.online/images/logo/Logo-resize.png"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://lembangnanna.online/#website",
+          "url": "https://lembangnanna.online",
+          "name": "Desa Nanna - Portal Resmi",
+          "alternateName": ["Portal Desa Nanna", "Website Nanna Nanggala", "Lembang Nanna Online"],
+          "description": "Website resmi Desa Nanna di Lembang Nanna Nanggala, Toraja Utara",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://lembangnanna.online/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Organization",
+          "name": "Pemerintah Desa Nanna",
+          "alternateName": ["Desa Nanna Nanggala", "Pemerintahan Desa Nanna", "Desa Nanna Toraja Utara"],
+          "url": "https://lembangnanna.online",
+          "logo": "https://lembangnanna.online/images/logo/Logo-resize.png",
+          "description": "Pemerintah Desa Nanna di Lembang Nanna Nanggala, Kecamatan Nanggala, Toraja Utara",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Nanggala",
+            "addressRegion": "Toraja Utara",
+            "addressCountry": "Indonesia"
+          },
+          "sameAs": [
+            "https://www.instagram.com/kknt114unhas_nanna",
+            "https://www.tiktok.com/@kknt114.lembangnanna"
+          ]
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "Desa Nanna",
+          "description": "Desa wisata budaya di Lembang Nanna Nanggala, Kecamatan Nanggala, Toraja Utara",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Nanggala",
+            "addressRegion": "Toraja Utara", 
+            "addressCountry": "Indonesia"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-3.0",
+            "longitude": "119.8"
+          },
+          "url": "https://lembangnanna.online",
+          "telephone": "+62-xxx-xxxx-xxxx",
+          "openingHours": "Mo-Su 00:00-23:59",
+          "priceRange": "Gratis"
+        }
+      ]
     });
     
     // Add script to document head
@@ -40,7 +109,9 @@ export default function JsonLd() {
     
     // Clean up
     return () => {
-      document.head.removeChild(script);
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
     };
   }, []);
   

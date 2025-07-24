@@ -68,6 +68,7 @@ function NavLinks({ closeMenu }: { closeMenu: () => void }) {
       <button onClick={() => handleNavClick('sectionLokasi')} className="block hover:text-blue-300 transition-colors text-left cursor-pointer">Lokasi</button>
       <button onClick={() => handleNavClick('sectionSarana')} className="block hover:text-blue-300 transition-colors text-left cursor-pointer">Sarana</button>
       <button onClick={() => handleNavClick('sectionInfografis')} className="block hover:text-blue-300 transition-colors text-left cursor-pointer">Infografis</button>
+      <button onClick={() => handleNavClick('about-nanna')} className="block hover:text-blue-300 transition-colors text-left cursor-pointer">Desa Nanna</button>
       <button onClick={() => handleNavClick('sectionHubungi')} className="block hover:text-blue-300 transition-colors text-left cursor-pointer">Kontak</button>
       <button onClick={() => handleNavClick('sectionkknt114')} className="block hover:text-blue-300 transition-colors text-left cursor-pointer">KKNT114</button>
     </>
