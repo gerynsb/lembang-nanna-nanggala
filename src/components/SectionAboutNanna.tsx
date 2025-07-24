@@ -20,7 +20,7 @@ export default function SectionAboutNanna() {
             Lembang Nanna Nanggala
           </div>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Desa Nanna atau lembang nanna' terletak di Lembang Nanna Nanggala, Kecamatan Nanggala, 
+            Desa Nanna atau lembang nanna&apos; terletak di Lembang Nanna Nanggala, Kecamatan Nanggala, 
             Kabupaten Toraja Utara, Sulawesi Selatan. Nanna merupakan destinasi 
             wisata budaya yang kaya akan tradisi Toraja autentik.
           </p>
