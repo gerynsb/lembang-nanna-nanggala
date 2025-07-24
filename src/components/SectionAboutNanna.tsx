@@ -78,6 +78,775 @@ export default function SectionAboutNanna() {
           </div>
         </div>
 
+        {/* Section Dusun di Nanna */}
+        <div className="mb-16 p-12 rounded-3xl shadow-2xl" style={{ backgroundColor: '#00052d' }}>
+          {/* Header Section */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Dusun di Nanna
+            </h2>
+            <h3 className="text-2xl md:text-3xl font-semibold text-blue-400 mb-8">
+              Dusun Batang Palli Tanete
+            </h3>
+          </div>
+
+          {/* Content Section - Image and Description */}
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            {/* Image */}
+            <div className="relative group">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                <img 
+                  src="/images/Toraja/Gambar1.jpg" 
+                  alt="Dusun Batang Palli Tanete"
+                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </div>
+
+            {/* Description */}
+            <div className="space-y-6">
+              <h4 className="text-2xl font-bold text-white mb-4">
+                Tentang Dusun Batang Palli Tanete
+              </h4>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Dusun Batang Palli Tanete adalah lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+                nulla pariatur.
+              </p>
+              {/* <p className="text-lg text-gray-600 leading-relaxed">
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+                mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit 
+                voluptatem accusantium doloremque laudantium.
+              </p> */}
+            </div>
+          </div>
+
+          {/* Auto-sliding Gallery */}
+          <div className="relative">
+            <h4 className="text-2xl font-bold text-white text-center mb-8">
+              Galeri Dokumentasi
+            </h4>
+            
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+              <div className="flex animate-[slide_15s_infinite_linear] hover:[animation-play-state:paused]">
+                {/* First set of images */}
+                <div className="flex-shrink-0 w-80 h-60 mx-2">
+                  <img 
+                    src="/images/kknt114/dokumentasi-1.png" 
+                    alt="Dokumentasi 1"
+                    className="w-full h-full object-cover rounded-xl shadow-lg"
+                  />
+                </div>
+                <div className="flex-shrink-0 w-80 h-60 mx-2">
+                  <img 
+                    src="/images/kknt114/dokumentasi-2.png" 
+                    alt="Dokumentasi 2"
+                    className="w-full h-full object-cover rounded-xl shadow-lg"
+                  />
+                </div>
+                <div className="flex-shrink-0 w-80 h-60 mx-2">
+                  <img 
+                    src="/images/kknt114/dokumentasi-3.png" 
+                    alt="Dokumentasi 3"
+                    className="w-full h-full object-cover rounded-xl shadow-lg"
+                  />
+                </div>
+                
+                {/* Duplicate set for seamless loop */}
+                <div className="flex-shrink-0 w-80 h-60 mx-2">
+                  <img 
+                    src="/images/kknt114/dokumentasi-1.png" 
+                    alt="Dokumentasi 1"
+                    className="w-full h-full object-cover rounded-xl shadow-lg"
+                  />
+                </div>
+                <div className="flex-shrink-0 w-80 h-60 mx-2">
+                  <img 
+                    src="/images/kknt114/dokumentasi-2.png" 
+                    alt="Dokumentasi 2"
+                    className="w-full h-full object-cover rounded-xl shadow-lg"
+                  />
+                </div>
+                <div className="flex-shrink-0 w-80 h-60 mx-2">
+                  <img 
+                    src="/images/kknt114/dokumentasi-3.png" 
+                    alt="Dokumentasi 3"
+                    className="w-full h-full object-cover rounded-xl shadow-lg"
+                  />
+                </div>
+                {/* Duplicate set for seamless loop */}
+                <div className="flex-shrink-0 w-80 h-60 mx-2">
+                  <img 
+                    src="/images/kknt114/dokumentasi-1.png" 
+                    alt="Dokumentasi 1"
+                    className="w-full h-full object-cover rounded-xl shadow-lg"
+                  />
+                </div>
+                <div className="flex-shrink-0 w-80 h-60 mx-2">
+                  <img 
+                    src="/images/kknt114/dokumentasi-2.png" 
+                    alt="Dokumentasi 2"
+                    className="w-full h-full object-cover rounded-xl shadow-lg"
+                  />
+                </div>
+                <div className="flex-shrink-0 w-80 h-60 mx-2">
+                  <img 
+                    src="/images/kknt114/dokumentasi-3.png" 
+                    alt="Dokumentasi 3"
+                    className="w-full h-full object-cover rounded-xl shadow-lg"
+                  />
+                </div>
+              </div>
+              
+              {/* Gradient overlays for smooth edges - adjusted for dark background */}
+              <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#00052d] to-transparent z-10"></div>
+              <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#00052d] to-transparent z-10"></div>
+            </div>
+            
+            <p className="text-center text-gray-400 mt-4 text-sm">
+              Galeri akan berhenti saat di-hover
+            </p>
+          </div>
+
+          {/* Dusun Kedua */}
+          <div className="mt-20">
+            {/* Header Section Dusun Kedua */}
+            <div className="text-center mb-12">
+              <h3 className="text-2xl md:text-3xl font-semibold text-blue-400 mb-8">
+                Dusun Buntu Nanna'
+              </h3>
+            </div>
+
+            {/* Content Section - Image and Description */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              {/* Image */}
+              <div className="relative group">
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                  <img 
+                    src="/images/Toraja/Gambar2.jpg" 
+                    alt="Dusun Kedua"
+                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+              </div>
+
+              {/* Description */}
+              <div className="space-y-6">
+                <h4 className="text-2xl font-bold text-white mb-4">
+                  Tentang Dusun Buntu Nanna'
+                </h4>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Dusun Buntu Nanna' adalah lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+                  nulla pariatur.
+                </p>
+              </div>
+            </div>
+
+            {/* Auto-sliding Gallery Dusun Keempat */}
+            <div className="relative">
+              <h4 className="text-2xl font-bold text-white text-center mb-8">
+                Galeri Dokumentasi Dusun Buntu Nanna'
+              </h4>
+              
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                <div className="flex animate-[slide_15s_infinite_linear] hover:[animation-play-state:paused]">
+                  {/* First set of images */}
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-1.png" 
+                      alt="Dokumentasi 1"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-2.png" 
+                      alt="Dokumentasi 2"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-3.png" 
+                      alt="Dokumentasi 3"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  
+                  {/* Duplicate set for seamless loop */}
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-1.png" 
+                      alt="Dokumentasi 1"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-2.png" 
+                      alt="Dokumentasi 2"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-3.png" 
+                      alt="Dokumentasi 3"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  
+                  {/* Duplicate set for seamless loop */}
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-1.png" 
+                      alt="Dokumentasi 1"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-2.png" 
+                      alt="Dokumentasi 2"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-3.png" 
+                      alt="Dokumentasi 3"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                </div>
+                
+                {/* Gradient overlays for smooth edges - adjusted for dark background */}
+                <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#00052d] to-transparent z-10"></div>
+                <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#00052d] to-transparent z-10"></div>
+              </div>
+              
+              <p className="text-center text-gray-400 mt-4 text-sm">
+                Galeri akan berhenti saat di-hover
+              </p>
+            </div>
+          </div>
+
+          {/* Dusun Ketiga */}
+          <div className="mt-20">
+            {/* Header Section Dusun Keempat */}
+            <div className="text-center mb-12">
+              <h3 className="text-2xl md:text-3xl font-semibold text-blue-400 mb-8">
+                Dusun Buntu Palilli'
+              </h3>
+            </div>
+
+            {/* Content Section - Image and Description */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              {/* Image */}
+              <div className="relative group">
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                  <img 
+                    src="/images/Toraja/Gambar4.webp" 
+                    alt="Dusun Buntu Palilli'"
+                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+              </div>
+
+              {/* Description */}
+              <div className="space-y-6">
+                <h4 className="text-2xl font-bold text-white mb-4">
+                  Tentang Dusun Buntu Palilli'
+                </h4>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Dusun Buntu Palilli' adalah lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+                  nulla pariatur.
+                </p>
+              </div>
+            </div>
+
+            {/* Auto-sliding Gallery Dusun Ketiga */}
+            <div className="relative">
+              <h4 className="text-2xl font-bold text-white text-center mb-8">
+                Galeri Dokumentasi Dusun Buntu Palilli'
+              </h4>
+              
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                <div className="flex animate-[slide_15s_infinite_linear] hover:[animation-play-state:paused]">
+                  {/* First set of images */}
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-1.png" 
+                      alt="Dokumentasi 1"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-2.png" 
+                      alt="Dokumentasi 2"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-3.png" 
+                      alt="Dokumentasi 3"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  
+                  {/* Duplicate set for seamless loop */}
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-1.png" 
+                      alt="Dokumentasi 1"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-2.png" 
+                      alt="Dokumentasi 2"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-3.png" 
+                      alt="Dokumentasi 3"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  
+                  {/* Duplicate set for seamless loop */}
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-1.png" 
+                      alt="Dokumentasi 1"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-2.png" 
+                      alt="Dokumentasi 2"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-3.png" 
+                      alt="Dokumentasi 3"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                </div>
+                
+                {/* Gradient overlays for smooth edges - adjusted for dark background */}
+                <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#00052d] to-transparent z-10"></div>
+                <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#00052d] to-transparent z-10"></div>
+              </div>
+              
+              <p className="text-center text-gray-400 mt-4 text-sm">
+                Galeri akan berhenti saat di-hover
+              </p>
+            </div>
+          </div>
+
+          {/* Dusun Keempat */}
+          <div className="mt-20">
+            {/* Header Section Dusun Keempat */}
+            <div className="text-center mb-12">
+              <h3 className="text-2xl md:text-3xl font-semibold text-blue-400 mb-8">
+                Dusun Saluna'
+              </h3>
+            </div>
+
+            {/* Content Section - Image and Description */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              {/* Image */}
+              <div className="relative group">
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                  <img 
+                    src="/images/Toraja/Gambar5.jpg" 
+                    alt="Dusun Saluna'"
+                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+              </div>
+
+              {/* Description */}
+              <div className="space-y-6">
+                <h4 className="text-2xl font-bold text-white mb-4">
+                  Tentang Dusun Saluna'
+                </h4>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Dusun Saluna' adalah lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+                  nulla pariatur.
+                </p>
+              </div>
+            </div>
+
+            {/* Auto-sliding Gallery Dusun Keempat */}
+            <div className="relative">
+              <h4 className="text-2xl font-bold text-white text-center mb-8">
+                Galeri Dokumentasi Dusun Saluna'
+              </h4>
+              
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                <div className="flex animate-[slide_15s_infinite_linear] hover:[animation-play-state:paused]">
+                  {/* First set of images */}
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-1.png" 
+                      alt="Dokumentasi 1"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-2.png" 
+                      alt="Dokumentasi 2"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-3.png" 
+                      alt="Dokumentasi 3"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  
+                  {/* Duplicate set for seamless loop */}
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-1.png" 
+                      alt="Dokumentasi 1"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-2.png" 
+                      alt="Dokumentasi 2"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-3.png" 
+                      alt="Dokumentasi 3"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  
+                  {/* Duplicate set for seamless loop */}
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-1.png" 
+                      alt="Dokumentasi 1"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-2.png" 
+                      alt="Dokumentasi 2"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-3.png" 
+                      alt="Dokumentasi 3"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                </div>
+                
+                {/* Gradient overlays for smooth edges - adjusted for dark background */}
+                <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#00052d] to-transparent z-10"></div>
+                <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#00052d] to-transparent z-10"></div>
+              </div>
+              
+              <p className="text-center text-gray-400 mt-4 text-sm">
+                Galeri akan berhenti saat di-hover
+              </p>
+            </div>
+          </div>
+
+          {/* Dusun Kelima */}
+          <div className="mt-20">
+            {/* Header Section Dusun Kelima */}
+            <div className="text-center mb-12">
+              <h3 className="text-2xl md:text-3xl font-semibold text-blue-400 mb-8">
+                Dusun Buntu Kalando
+              </h3>
+            </div>
+
+            {/* Content Section - Image and Description */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              {/* Image */}
+              <div className="relative group">
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                  <img 
+                    src="/images/Toraja/Gambar6.jpg" 
+                    alt="Dusun Buntu Kalando"
+                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+              </div>
+
+              {/* Description */}
+              <div className="space-y-6">
+                <h4 className="text-2xl font-bold text-white mb-4">
+                  Tentang Dusun Buntu Kalando
+                </h4>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Dusun Buntu Kalando adalah lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+                  nulla pariatur.
+                </p>
+              </div>
+            </div>
+
+            {/* Auto-sliding Gallery Dusun Keempat */}
+            <div className="relative">
+              <h4 className="text-2xl font-bold text-white text-center mb-8">
+                Galeri Dokumentasi Dusun Buntu Kalando
+              </h4>
+              
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                <div className="flex animate-[slide_15s_infinite_linear] hover:[animation-play-state:paused]">
+                  {/* First set of images */}
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-1.png" 
+                      alt="Dokumentasi 1"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-2.png" 
+                      alt="Dokumentasi 2"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-3.png" 
+                      alt="Dokumentasi 3"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  
+                  {/* Duplicate set for seamless loop */}
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-1.png" 
+                      alt="Dokumentasi 1"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-2.png" 
+                      alt="Dokumentasi 2"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-3.png" 
+                      alt="Dokumentasi 3"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  
+                  {/* Duplicate set for seamless loop */}
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-1.png" 
+                      alt="Dokumentasi 1"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-2.png" 
+                      alt="Dokumentasi 2"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-3.png" 
+                      alt="Dokumentasi 3"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                </div>
+                
+                {/* Gradient overlays for smooth edges - adjusted for dark background */}
+                <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#00052d] to-transparent z-10"></div>
+                <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#00052d] to-transparent z-10"></div>
+              </div>
+              
+              <p className="text-center text-gray-400 mt-4 text-sm">
+                Galeri akan berhenti saat di-hover
+              </p>
+            </div>
+          </div>
+
+          {/* Dusun Keenam */}
+          <div className="mt-20">
+            {/* Header Section Dusun Keenam */}
+            <div className="text-center mb-12">
+              <h3 className="text-2xl md:text-3xl font-semibold text-blue-400 mb-8">
+                Dusun Tanete
+              </h3>
+            </div>
+
+            {/* Content Section - Image and Description */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              {/* Image */}
+              <div className="relative group">
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                  <img 
+                    src="/images/Toraja/Gambar5.jpg" 
+                    alt="Dusun Tanete"
+                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+              </div>
+
+              {/* Description */}
+              <div className="space-y-6">
+                <h4 className="text-2xl font-bold text-white mb-4">
+                  Tentang Tanete
+                </h4>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Dusun Tanete adalah lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+                  nulla pariatur.
+                </p>
+              </div>
+            </div>
+
+            {/* Auto-sliding Gallery Dusun Keempat */}
+            <div className="relative">
+              <h4 className="text-2xl font-bold text-white text-center mb-8">
+                Galeri Dokumentasi Dusun Tanete
+              </h4>
+              
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                <div className="flex animate-[slide_15s_infinite_linear] hover:[animation-play-state:paused]">
+                  {/* First set of images */}
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-1.png" 
+                      alt="Dokumentasi 1"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-2.png" 
+                      alt="Dokumentasi 2"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-3.png" 
+                      alt="Dokumentasi 3"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  
+                  {/* Duplicate set for seamless loop */}
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-1.png" 
+                      alt="Dokumentasi 1"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-2.png" 
+                      alt="Dokumentasi 2"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-3.png" 
+                      alt="Dokumentasi 3"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  
+                  {/* Duplicate set for seamless loop */}
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-1.png" 
+                      alt="Dokumentasi 1"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-2.png" 
+                      alt="Dokumentasi 2"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-80 h-60 mx-2">
+                    <img 
+                      src="/images/kknt114/dokumentasi-3.png" 
+                      alt="Dokumentasi 3"
+                      className="w-full h-full object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+                </div>
+                
+                {/* Gradient overlays for smooth edges - adjusted for dark background */}
+                <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#00052d] to-transparent z-10"></div>
+                <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#00052d] to-transparent z-10"></div>
+              </div>
+              
+              <p className="text-center text-gray-400 mt-4 text-sm">
+                Galeri akan berhenti saat di-hover
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Feature Section dengan design yang lebih menarik */}
         <div className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 p-10 rounded-3xl shadow-2xl overflow-hidden">
           {/* Background pattern */}
