@@ -1,25 +1,25 @@
 {
-  "name": "Lembang Nanna Nanggala",
-  "short_name": "Lembang Nanna",
-  "description": "Website resmi Lembang Nanna Nanggala, Kecamatan Nanggala, Kabupaten Toraja Utara",
+  "name": "Desa Nanna - Lembang Nanna Nanggala",
+  "short_name": "Desa Nanna",
+  "description": "Portal resmi Desa Nanna di Lembang Nanna Nanggala, Toraja Utara",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#00052d",
+  "theme_color": "#1e40af",
   "icons": [
     {
-      "src": "/images/logo/Logo-resize.png",
+      "src": "/images/logo/Logo-resize.png?v=2025",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/images/logo/Logo-resize.png",
+      "src": "/images/logo/Logo-resize.png?v=2025",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "/favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "/favicon.ico?v=2025",
+      "sizes": "48x48",
       "type": "image/x-icon"
     }
   ]

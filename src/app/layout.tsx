@@ -25,21 +25,26 @@ export const metadata: Metadata = {
   authors: [{ name: "Mahasiswa KKN Unhas" }],
   metadataBase: new URL('https://lembangnanna.online'),
   icons: {
-    icon: "/images/logo/Logo-resize.png",
-    shortcut: "/images/logo/Logo-resize.png",
-    apple: "/images/logo/Logo-resize.png",
+    icon: [
+      { url: "/images/logo/Logo-resize.png?v=2025", sizes: "32x32", type: "image/png" },
+      { url: "/images/logo/Logo-resize.png?v=2025", sizes: "16x16", type: "image/png" }
+    ],
+    shortcut: "/images/logo/Logo-resize.png?v=2025",
+    apple: [
+      { url: "/images/logo/Logo-resize.png?v=2025", sizes: "180x180", type: "image/png" }
+    ],
   },
 
   openGraph: {
     title: "Lembang Nanna - Toraja Utara",
     description: "Portal informasi resmi Lembang Nanna Nanggala, Toraja Utara.",
     
-    url: "https://lembang-nanna-nanggala.vercel.app",
+    url: "https://lembangnanna.online",
     siteName: "Lembang Nanna",
     
     images: [
       {
-        url: "/images/logo/logo.png",
+        url: "/images/logo/Logo-resize.png?v=2025",
         width: 800,
         height: 600,
         alt: "Logo Lembang Nanna",
@@ -58,15 +63,24 @@ export default function RootLayout({
   return (
     <html lang="id">
       <head>
-        <link rel="canonical" href="https://lembangnanna.online/" />
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="/images/logo/Logo-resize.png" />
-        <link rel="apple-touch-icon" href="/images/logo/Logo-resize.png" />
-        <link rel="shortcut icon" href="/images/logo/Logo-resize.png" />
-        <link rel="mask-icon" href="/images/logo/Logo-resize.png" color="#00052d" />
-        <link rel="manifest" href="/site.webmanifest" />
+        {/* Force favicon dengan cache busting timestamp */}
+        <link rel="icon" href="/images/logo/Logo-resize.png?v=2025" sizes="any" />
+        <link rel="icon" href="/images/logo/Logo-resize.png?v=2025" type="image/png" sizes="32x32" />
+        <link rel="icon" href="/images/logo/Logo-resize.png?v=2025" type="image/png" sizes="16x16" />
+        <link rel="apple-touch-icon" href="/images/logo/Logo-resize.png?v=2025" />
+        <link rel="shortcut icon" href="/images/logo/Logo-resize.png?v=2025" />
+        <link rel="mask-icon" href="/images/logo/Logo-resize.png?v=2025" color="#00052d" />
+        
+        {/* PWA Manifest */}
+        <link rel="manifest" href="/manifest.json?v=2025" />
+        
+        {/* Theme colors */}
         <meta name="msapplication-TileColor" content="#00052d" />
         <meta name="theme-color" content="#ffffff" />
+        
+        {/* SEO Meta */}
+        <link rel="canonical" href="https://lembangnanna.online/" />
+        <meta name="robots" content="index, follow" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
