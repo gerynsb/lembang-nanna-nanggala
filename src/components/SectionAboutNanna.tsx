@@ -216,7 +216,7 @@ export default function SectionAboutNanna() {
             {/* Header Section Dusun Kedua */}
             <div className="text-center mb-12">
               <h3 className="text-2xl md:text-3xl font-semibold text-blue-400 mb-8">
-                Dusun Buntu Nanna'
+                Dusun Buntu Nanna&apos;
               </h3>
             </div>
 
@@ -237,10 +237,10 @@ export default function SectionAboutNanna() {
               {/* Description */}
               <div className="space-y-6">
                 <h4 className="text-2xl font-bold text-white mb-4">
-                  Tentang Dusun Buntu Nanna'
+                  Tentang Dusun Buntu Nanna&apos;
                 </h4>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Dusun Buntu Nanna' adalah lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Dusun Buntu Nanna&apos; adalah lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                   Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
                   veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
@@ -252,7 +252,7 @@ export default function SectionAboutNanna() {
             {/* Auto-sliding Gallery Dusun Keempat */}
             <div className="relative">
               <h4 className="text-2xl font-bold text-white text-center mb-8">
-                Galeri Dokumentasi Dusun Buntu Nanna'
+                Galeri Dokumentasi Dusun Buntu Nanna&apos;
               </h4>
               
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
@@ -343,7 +343,7 @@ export default function SectionAboutNanna() {
             {/* Header Section Dusun Keempat */}
             <div className="text-center mb-12">
               <h3 className="text-2xl md:text-3xl font-semibold text-blue-400 mb-8">
-                Dusun Buntu Palilli'
+                Dusun Buntu Palilli&apos;
               </h3>
             </div>
 
@@ -364,10 +364,10 @@ export default function SectionAboutNanna() {
               {/* Description */}
               <div className="space-y-6">
                 <h4 className="text-2xl font-bold text-white mb-4">
-                  Tentang Dusun Buntu Palilli'
+                  Tentang Dusun Buntu Palilli&apos;
                 </h4>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Dusun Buntu Palilli' adalah lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Dusun Buntu Palilli&apos; adalah lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                   Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
                   veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
@@ -379,7 +379,7 @@ export default function SectionAboutNanna() {
             {/* Auto-sliding Gallery Dusun Ketiga */}
             <div className="relative">
               <h4 className="text-2xl font-bold text-white text-center mb-8">
-                Galeri Dokumentasi Dusun Buntu Palilli'
+                Galeri Dokumentasi Dusun Buntu Palilli&apos;
               </h4>
               
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
@@ -470,7 +470,7 @@ export default function SectionAboutNanna() {
             {/* Header Section Dusun Keempat */}
             <div className="text-center mb-12">
               <h3 className="text-2xl md:text-3xl font-semibold text-blue-400 mb-8">
-                Dusun Saluna'
+                Dusun Saluna&apos;
               </h3>
             </div>
 
@@ -491,10 +491,10 @@ export default function SectionAboutNanna() {
               {/* Description */}
               <div className="space-y-6">
                 <h4 className="text-2xl font-bold text-white mb-4">
-                  Tentang Dusun Saluna'
+                  Tentang Dusun Saluna&apos;
                 </h4>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Dusun Saluna' adalah lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Dusun Saluna&apos; adalah lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                   Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
                   veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
@@ -506,7 +506,7 @@ export default function SectionAboutNanna() {
             {/* Auto-sliding Gallery Dusun Keempat */}
             <div className="relative">
               <h4 className="text-2xl font-bold text-white text-center mb-8">
-                Galeri Dokumentasi Dusun Saluna'
+                Galeri Dokumentasi Dusun Saluna&apos;
               </h4>
               
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
