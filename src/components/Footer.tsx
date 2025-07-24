@@ -17,7 +17,7 @@ export default function Footer() {
                 <Phone className="w-5 h-5 text-red-500" />
                 <div>
                   <p className="text-gray-400 text-sm">Telepon</p>
-                  <p className="font-medium">08xxxxxxxxxx</p>
+                  <p className="font-medium">081343774233</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
@@ -37,7 +37,7 @@ export default function Footer() {
                 </svg>
                 <div>
                   <p className="text-gray-400 text-sm">WhatsApp</p>
-                  <p className="font-medium">08xxxxxxxxxx</p>
+                  <p className="font-medium">081343774233</p>
                 </div>
               </div>
             </div>
