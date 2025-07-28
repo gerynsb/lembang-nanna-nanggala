@@ -17,7 +17,7 @@ export default function SectionKeunggulan() {
 
         {/* Konten */}
         <div className="text-white">
-          <h2 className="text-4xl font-bold mb-10">Keunggulan Lembang Nanna</h2>
+          <h2 className="text-4xl font-bold mb-10">Keunggulan Lembang Nanna&apos;</h2>
           <ul className="space-y-8 text-xl">
             <li className="flex flex-col">
               <div className="flex items-center gap-3 mb-2">

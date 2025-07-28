@@ -28,7 +28,7 @@ export default function Hero() {
       {/* Konten tengah */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-4 text-white">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold max-w-4xl leading-snug text-shadow-lg">
-          LEMBANG NANNA NANGGALA, KEC. NANGGALA, KAB. TORAJA UTARA
+          LEMBANG NANNA&apos; NANGGALA, KEC. NANGGALA, KAB. TORAJA UTARA
         </h1>
         
         <p className="mt-4 text-lg md:text-xl max-w-2xl text-shadow">

@@ -53,3 +53,32 @@ html {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* Animated bar chart */
+@keyframes grow-bar {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--bar-height);
+  }
+}
+
+.bar-chart-animate {
+  animation: grow-bar 1.5s ease-out;
+  animation-fill-mode: forwards;
+}
+
+/* Pulse animation for numbers */
+@keyframes pulse-number {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.number-pulse {
+  animation: pulse-number 2s ease-in-out infinite;
+}

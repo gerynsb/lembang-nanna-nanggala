@@ -9,10 +9,10 @@ export default function SectionLokasi() {
             LOKASI
           </span> */}
           <h2 className="text-4xl font-bold text-black mb-4">
-            Lokasi Lembang Nanna
+            Lokasi Lembang Nanna&apos;
           </h2>
           <p className="text-black max-w-2xl mx-auto">
-            Temukan keindahan Lembang Nanna yang berlokasi di Kecamatan Nanggala,
+            Temukan keindahan Lembang Nanna&apos; yang berlokasi di Kecamatan Nanggala,
             Kabupaten Toraja Utara, Sulawesi Selatan.
           </p>
         </div>
@@ -41,7 +41,7 @@ export default function SectionLokasi() {
                 <div>
                   <h4 className="font-semibold text-black">Alamat</h4>
                   <p className="text-black">
-                    Lembang Nanna, Kec. Nanggala, Kabupaten Toraja Utara,
+                    Lembang Nanna&apos;, Kec. Nanggala, Kabupaten Toraja Utara,
                     Sulawesi Selatan
                   </p>
                 </div>

@@ -20,10 +20,10 @@ export default function Section3() {
         {/* Teks */}
         <div className="text-gray-900 lg:pl-10">
           <p className="flex items-center gap-2 text-sm text-green-700 font-medium mb-4">
-            <MapPin className="w-4 h-4" /> Desa Nanna Nanggala
+            <MapPin className="w-4 h-4" /> Desa Nanna&apos; Nanggala
           </p>
           <h2 className="text-5xl font-bold mb-6 leading-tight">
-            Membawa Lembang Nanna
+            Membawa Lembang Nanna&apos;
             <br />
             dalam Dunia Digital
           </h2>
