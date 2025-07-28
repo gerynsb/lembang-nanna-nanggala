@@ -99,10 +99,6 @@ function DraggableGallery({ images, title }: { images: string[], title: string }
             </div>
           ))}
         </div>
-        
-        {/* Gradient overlays for smooth edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#00052d] to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#00052d] to-transparent z-10 pointer-events-none"></div>
       </div>
       
       <p className="text-center text-gray-400 mt-4 text-sm">
@@ -191,7 +187,7 @@ export default function SectionAboutNanna() {
         </div>
 
         {/* Section Dusun di Nanna */}
-        <div className="mb-16 p-12 rounded-3xl shadow-2xl" style={{ backgroundColor: '#00052d' }}>
+        <div className="-mx-4 mb-16 p-12 shadow-2xl" style={{ backgroundColor: '#00052d' }}>
           {/* Header Section */}
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
