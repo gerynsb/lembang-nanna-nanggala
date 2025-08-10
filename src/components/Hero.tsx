@@ -16,7 +16,7 @@ export default function Hero() {
       id="hero"
       className="relative w-full h-screen bg-cover bg-center"
       style={{
-        backgroundImage: "url('/images/hero/hero-section.png')"
+        backgroundImage: "url('/images/Palilli/Palilli7.jpg')"
       }}
     >
       {/* More transparent overlay */}

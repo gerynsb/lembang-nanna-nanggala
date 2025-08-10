@@ -7,7 +7,7 @@ export default function SectionKeunggulan() {
         {/* Gambar */}
         <div className="rounded-3xl overflow-hidden shadow-lg">
           <Image
-            src="/images/keunggulan/Pemandangan.jpg"
+            src="/images/keunggulan/Jalanjalan.jpeg"
             alt="Pemandangan Lembang Nanna"
             width={600}
             height={400}

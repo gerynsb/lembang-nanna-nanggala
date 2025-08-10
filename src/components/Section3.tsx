@@ -9,7 +9,7 @@ export default function Section3() {
         {/* Gambar */}
         <div className="w-full rounded-xl overflow-hidden shadow-lg">
           <Image
-            src="/images/Tentang/Toraja.jpg"
+            src="/images/Tentang/Tongkonan.jpeg"
             alt="Budaya Toraja"
             width={700}
             height={500}
