@@ -19,7 +19,7 @@ const potensi = [
     {
     title: "Air Terjun Batu Lampo' ",
     desc: "Air terjun Batu Lampo' adalah air terjun yang indah dan menawan.",
-    image: "/images/Potensi/batulampo'.jpeg",
+    image: "/images/Potensi/batulampo.jpeg",
   },
     {
     title: "Tongkonan Kariango",

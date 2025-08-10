@@ -398,7 +398,7 @@ export default function SectionAboutNanna() {
               <div className="relative group">
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                   <img 
-                    src="/images/kalando/Gambar1.jpeg" 
+                    src="/images/kalando/gambar1.jpeg" 
                     alt="Dusun Buntu Kalando"
                     className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                   />

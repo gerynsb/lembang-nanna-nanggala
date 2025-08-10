@@ -11,7 +11,7 @@ const sarana = [
   },
   {
     title: "Destinasi Menarik",
-    image: "/images/Potensi/Tongkonan.jpeg",
+    image: "/images/Potensi/batubagus.jpeg",
   },
 ];
 
