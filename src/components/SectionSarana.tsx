@@ -3,15 +3,15 @@ import Image from "next/image";
 const sarana = [
   {
     title: "Pelayanan Publik",
-    image: "/images/Sarana/puskesmas.jpg",
+    image: "/images/Sarana/Posyandu.jpeg",
   },
   {
     title: "Fasilitas Umum",
-    image: "/images/Sarana/tempat-sampah.jpg",
+    image: "/images/Sarana/Gereja.jpeg",
   },
   {
     title: "Destinasi Menarik",
-    image: "/images/Sarana/tongkonan1.jpg",
+    image: "/images/Potensi/Tongkonan.jpeg",
   },
 ];
 

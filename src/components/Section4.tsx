@@ -2,22 +2,37 @@ import Image from "next/image";
 
 const potensi = [
   {
-    title: "Wisata Alam",
-    desc: "Dipenuhi pemandangan Alam yang indah",
-    image: "/images/Potensi/Toraja-2.jpg",
+    title: "Screenhouse",
+    desc: "Screenhouse budidaya cabai khas Toraja di Nanna' Nanggala.",
+    image: "/images/Potensi/screenhouse.jpeg",
   },
   {
-    title: "Wisata Budaya",
-    desc: "Beragam kegiatan adat Toraja menjadi daya tarik lembang ini.",
-    image: "/images/Potensi/upacara.webp",
+    title: "Agrowisata Batu Osok",
+    desc: "Wisata alam buatan perkebunan di dusun Mangli', Nanna' Nanggala.",
+    image: "/images/Potensi/Agrowisata.jpeg",
   },
   {
-    title: "Wisata Buatan",
-    desc: "Pertambakan dan budidaya ikan dipadukan dengan pemandangan yang indah.",
-    image: "/images/Potensi/tambak.jpg",
+    title: "Hutan Lindung Nanggala",
+    desc: "Nanna' Nanggala memiliki hutan lindung yang asri dan lebat.",
+    image: "/images/Potensi/hutan.jpeg",
+  },
+    {
+    title: "Air Terjun Batu Lampo' ",
+    desc: "Air terjun Batu Lampo' adalah air terjun yang indah dan menawan.",
+    image: "/images/Potensi/batulampo'.jpeg",
+  },
+    {
+    title: "Tongkonan Kariango",
+    desc: "Tongkonan paling tua di lembang Nanna' Nanggala dengan nilai sejarah yang tinggi.",
+    image: "/images/Potensi/Tongkonan.jpeg",
+  },
+    {
+    title: "Pesona Alam Nanna'",
+    desc: "Begitu banyak hamparan sawah dan hutan dengan pemandangannya yang indah.",
+    image: "/images/Potensi/Alam.jpeg",
   },
 ];
-
+  
 export default function Section4() {
   return (
     <section id="section4" className="bg-[#f2f8e8] py-24 px-6">

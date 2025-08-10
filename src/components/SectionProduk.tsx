@@ -3,11 +3,11 @@ import Image from "next/image";
 const produk = [
 	{
 		title: "Produk Pertanian Padi",
-		image: "/images/Produk/Panen.webp",
+		image: "/images/Produk/tani.jpeg",
 	},
 	{
 		title: "Pembudidayaan Ikan",
-		image: "/images/Produk/Budidaya.jpeg",
+		image: "/images/Produk/ikan.jpeg",
 	},
 ];
 

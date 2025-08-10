@@ -204,7 +204,7 @@ export default function SectionAboutNanna() {
             <div className="relative group">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img 
-                  src="/images/Toraja/Gambar1.jpg" 
+                  src="/images/batangpalli/gambarrill5.jpeg" 
                   alt="Dusun Batang Palli Tanete"
                   className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -218,11 +218,10 @@ export default function SectionAboutNanna() {
                 Tentang Dusun Batang Palli Tanete
               </h4>
               <p className="text-lg text-gray-300 leading-relaxed">
-                Dusun Batang Palli Tanete adalah lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-                nulla pariatur.
+                Dusun Batang Palli’ Tanete merupakan dusun yang menjadi pusat pemerintahan di Lembang Nanna’ Nanggala. 
+                Selain itu, dusun ini juga menjadi dusun yang paling berkembang di antara dusun lainnya. 
+                Infrastruktur dan jalanan pada dusun tersebut sudah dikelola dengan baik sehingga dapat dilalui dengan mudah. 
+                Selain itu di dusun ini juga terdapat fasilitas - fasilitas yang memadai seperti sekolah hingga gereja. 
               </p>
               {/* <p className="text-lg text-gray-600 leading-relaxed">
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
@@ -235,9 +234,9 @@ export default function SectionAboutNanna() {
           {/* Auto-sliding Gallery */}
           <DraggableGallery 
             images={[
-              "/images/kknt114/dokumentasi-1.png",
-              "/images/kknt114/dokumentasi-2.png", 
-              "/images/kknt114/dokumentasi-3.png"
+              "/images/batangpalli/gambarrill1.jpeg",
+              "/images/batangpalli/gambarrill2.jpeg", 
+              "/images/batangpalli/gambarrill3.jpeg"
             ]}
             title="Galeri Dokumentasi"
           />
@@ -247,7 +246,7 @@ export default function SectionAboutNanna() {
             {/* Header Section Dusun Kedua */}
             <div className="text-center mb-12">
               <h3 className="text-2xl md:text-3xl font-semibold text-blue-400 mb-8">
-                Dusun Buntu Nanna&apos;
+                Dusun Mangli'&apos;
               </h3>
             </div>
 
@@ -257,7 +256,7 @@ export default function SectionAboutNanna() {
               <div className="relative group">
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                   <img 
-                    src="/images/Toraja/Gambar2.jpg" 
+                    src="/images/mangli/gambar1.jpeg" 
                     alt="Dusun Kedua"
                     className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -268,14 +267,12 @@ export default function SectionAboutNanna() {
               {/* Description */}
               <div className="space-y-6">
                 <h4 className="text-2xl font-bold text-white mb-4">
-                  Tentang Dusun Buntu Nanna&apos;
+                  Tentang Dusun Mangli'&apos;
                 </h4>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Dusun Buntu Nanna&apos; adalah lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-                  nulla pariatur.
+                  Dusun Mangli’ adalah dusun yang paling luas di lembang Nanna’ Nanggala, di dusun ini hamparan sawah sangat luas dan bertebaran di mana mana. 
+                  Selain itu, di dusun ini juga terdapat hutan lindung, agrowisata serta screenhouse yang menarik untuk dikunjungi. 
+                  Dusun ini memiliki pemandangan alam yang sangat luas dan menarik untuk dilihat.
                 </p>
               </div>
             </div>
@@ -283,11 +280,11 @@ export default function SectionAboutNanna() {
             {/* Auto-sliding Gallery Dusun Buntu Nanna' */}
             <DraggableGallery 
               images={[
-                "/images/kknt114/dokumentasi-1.png",
-                "/images/kknt114/dokumentasi-2.png", 
-                "/images/kknt114/dokumentasi-3.png"
+                "/images/mangli/gambar2.jpeg",
+                "/images/mangli/gambar3.jpeg", 
+                "/images/mangli/gambar4.jpeg"
               ]}
-              title="Galeri Dokumentasi Dusun Buntu Nanna&apos;"
+              title="Galeri Dokumentasi Dusun Mangli' &apos;"
             />
           </div>
 
@@ -306,7 +303,7 @@ export default function SectionAboutNanna() {
               <div className="relative group">
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                   <img 
-                    src="/images/Toraja/Gambar4.webp" 
+                    src="/images/Palilli/Palilli2.jpg" 
                     alt="Dusun Buntu Palilli'"
                     className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -320,11 +317,8 @@ export default function SectionAboutNanna() {
                   Tentang Dusun Buntu Palilli&apos;
                 </h4>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Dusun Buntu Palilli&apos; adalah lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-                  nulla pariatur.
+                  Dusun Palilli’ adalah dusun yang memiliki penduduk paling sedikit, tetapi pemandangan yang dimiliki di dusun ini tidak kalah indah dengan dusun lainnya. 
+                  Selain itu, di dusun ini juga terdapat berbagai fasilitas seperti rumah ibadah hingga rumah - rumah adat yang tersebar. 
                 </p>
               </div>
             </div>
@@ -332,9 +326,10 @@ export default function SectionAboutNanna() {
             {/* Auto-sliding Gallery Dusun Buntu Palilli' */}
             <DraggableGallery 
               images={[
-                "/images/kknt114/dokumentasi-1.png",
-                "/images/kknt114/dokumentasi-2.png", 
-                "/images/kknt114/dokumentasi-3.png"
+                "/images/palilli/palilli4.jpg",
+                "/images/palilli/palilli5.jpg", 
+                "/images/palilli/palilli6.jpg",
+                "/images/palilli/palilli7.jpg"
               ]}
               title="Galeri Dokumentasi Dusun Buntu Palilli&apos;"
             />
@@ -355,7 +350,7 @@ export default function SectionAboutNanna() {
               <div className="relative group">
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                   <img 
-                    src="/images/Toraja/Gambar5.jpg" 
+                    src="/images/saluna'/gambar1.jpg" 
                     alt="Dusun Saluna'"
                     className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -369,11 +364,9 @@ export default function SectionAboutNanna() {
                   Tentang Dusun Saluna&apos;
                 </h4>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Dusun Saluna&apos; adalah lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-                  nulla pariatur.
+                  Dusun Saluna’ adalah dusun yang cukup berkembang seperti dusun Batang Palli’, 
+                  di dusun ini terdapat pemandangan indah yang dipenuhi hutan dan cukup menarik untuk dikunjungi. 
+                  Selain itu, dusun ini juga memiliki berbagai fasilitas sepert rumah ibadah dan sekolah SD yang menunjang berbagai aktifitas masyarakat di lembang Nanna’.
                 </p>
               </div>
             </div>
@@ -381,9 +374,10 @@ export default function SectionAboutNanna() {
             {/* Auto-sliding Gallery Dusun Saluna' */}
             <DraggableGallery 
               images={[
-                "/images/kknt114/dokumentasi-1.png",
-                "/images/kknt114/dokumentasi-2.png", 
-                "/images/kknt114/dokumentasi-3.png"
+                "/images/saluna'/gambar2.jpg",
+                "/images/saluna'/gambar3.jpg", 
+                "/images/saluna'/gambar4.jpg",
+                "/images/saluna'/gambar5.jpg"
               ]}
               title="Galeri Dokumentasi Dusun Saluna&apos;"
             />
@@ -404,7 +398,7 @@ export default function SectionAboutNanna() {
               <div className="relative group">
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                   <img 
-                    src="/images/Toraja/Gambar6.jpg" 
+                    src="/images/kalando/Gambar1.jpeg" 
                     alt="Dusun Buntu Kalando"
                     className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -418,11 +412,9 @@ export default function SectionAboutNanna() {
                   Tentang Dusun Buntu Kalando
                 </h4>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Dusun Buntu Kalando adalah lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-                  nulla pariatur.
+                  Buntu Kalando juga menjadi salah satu dusun yang berkembang di lembang Nanna’ Nanggala dan 
+                  memiliki berbagai fasilitas seperti rumah ibadah hingga sekolah menengah atas. 
+                  Buntu Kalando juga memiliki pemandangan hamparan sawah yang menarik untuk dilihat dan dikunjungi.
                 </p>
               </div>
             </div>
@@ -430,9 +422,9 @@ export default function SectionAboutNanna() {
             {/* Auto-sliding Gallery Dusun Buntu Kalando */}
             <DraggableGallery 
               images={[
-                "/images/kknt114/dokumentasi-1.png",
-                "/images/kknt114/dokumentasi-2.png", 
-                "/images/kknt114/dokumentasi-3.png"
+                "/images/kalando/gambar2.jpeg",
+                "/images/kalando/gambar3.jpeg", 
+                "/images/kalando/gambar4.jpeg",
               ]}
               title="Galeri Dokumentasi Dusun Buntu Kalando"
             />
@@ -453,7 +445,7 @@ export default function SectionAboutNanna() {
               <div className="relative group">
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                   <img 
-                    src="/images/Toraja/Gambar5.jpg" 
+                    src="/images/tanete/gambarsampul.jpg" 
                     alt="Dusun Tanete"
                     className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -467,11 +459,9 @@ export default function SectionAboutNanna() {
                   Tentang Tanete
                 </h4>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Dusun Tanete adalah lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-                  nulla pariatur.
+                  Tanete adalah dusun yang memiliki jumlah penduduk paling banyak dan juga memiliki wilayah yang cukup besar. 
+                  Di dusun ini juga terdapat objek wisata yang menarik yaitu air terjun batu Lampo’ yang menarik untuk dikunjungi. 
+                  Selain itu, pemandangan alam di dusun ini sangat indah dengan dikelilingi oleh hutan yang asri dan rindang.
                 </p>
               </div>
             </div>
@@ -479,9 +469,9 @@ export default function SectionAboutNanna() {
             {/* Auto-sliding Gallery Dusun Tanete */}
             <DraggableGallery 
               images={[
-                "/images/kknt114/dokumentasi-1.png",
-                "/images/kknt114/dokumentasi-2.png", 
-                "/images/kknt114/dokumentasi-3.png"
+                "/images/tanete/gambar3.jpg",
+                "/images/tanete/gambar1.jpg", 
+                "/images/tanete/gambar5.jpg"
               ]}
               title="Galeri Dokumentasi Dusun Tanete"
             />
@@ -524,7 +514,7 @@ export default function SectionAboutNanna() {
                 </h4>
                 <p className="text-blue-100 leading-relaxed">
                   Pengalaman budaya Toraja yang otentik di Nanna Nanggala dengan 
-                  tradisi yang masih hidup dan terpelihara.
+                  tradisi yang masih terpelihara.
                 </p>
               </div>
               

@@ -107,7 +107,7 @@ export default function SectionInfografis() {
             <div className="absolute -inset-4 bg-gradient-to-r from-blue-200 to-green-200 rounded-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-300 blur-xl"></div>
             <div className="relative bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
               <Image
-                src="/images/Infografis/Peta.png"
+                src="/images/Infografis/petafix.png"
                 alt="Peta Lembang Nanna"
                 width={800}
                 height={600}
@@ -340,8 +340,8 @@ export default function SectionInfografis() {
               <p className="text-green-100">Jarak ke Ibu Kota Kecamatan</p>
             </div>
             <div className="p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
-              <div className="text-3xl font-bold text-yellow-300 mb-2">12</div>
-              <p className="text-yellow-100">RT Aktif</p>
+              <div className="text-3xl font-bold text-yellow-300 mb-2">6</div>
+              <p className="text-yellow-100">Dusun</p>
             </div>
           </div>
         </div>
