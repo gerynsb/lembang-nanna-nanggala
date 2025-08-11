@@ -39,7 +39,7 @@ export default function KKNTSection() {
       <section className="bg-red-600 py-0">
         <div className="w-full">
           <Image
-            src="/images/kknt114/kknt-114-Unhas.png"
+            src="/images/kknt114/kknt114Unhas.png"
             alt="KKNT 114 Unhas"
             width={1920}
             height={600}
