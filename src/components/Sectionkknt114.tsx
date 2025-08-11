@@ -30,7 +30,7 @@ export default function KKNTSection() {
     setSelectedImage(null);
   };
 
-  // Menentukan foto yang ditampilkan (6 pertama atau semua)
+  // Menentukan foto yang ditampilkan (6 dfgdgpertama atau semua)
   const displayedPhotos = showAll ? dokumentasi : dokumentasi.slice(0, 6);
 
   return (
