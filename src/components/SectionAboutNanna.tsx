@@ -303,7 +303,7 @@ export default function SectionAboutNanna() {
               <div className="relative group">
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                   <img 
-                    src="/images/Palilli/Palilli2.jpg" 
+                    src="/images/Palilli/Palilligbr2.jpg" 
                     alt="Dusun Buntu Palilli'"
                     className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -326,10 +326,10 @@ export default function SectionAboutNanna() {
             {/* Auto-sliding Gallery Dusun Buntu Palilli' */}
             <DraggableGallery 
               images={[
-                "/images/palilli/palilli4.jpg",
-                "/images/palilli/palilli5.jpg", 
-                "/images/palilli/palilli6.jpg",
-                "/images/palilli/palilli7.jpg"
+                "/images/Palilli/palilligbr4.jpg",
+                "/images/Palilli/palilligbr5.jpg", 
+                "/images/Palilli/palilligbr6.jpg",
+                "/images/Palilli/palilligbr7.jpg"
               ]}
               title="Galeri Dokumentasi Dusun Buntu Palilli&apos;"
             />

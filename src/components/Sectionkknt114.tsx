@@ -9,7 +9,7 @@ const dokumentasi = [
   "/images/kknt114/foto4.JPG",
   "/images/kknt114/foto1.jpg",
   "/images/kknt114/foto.JPG",
-  "/images/kknt114/foto8.JPG",
+  "/images/kknt114/Foto8.JPG",
   "/images/kknt114/Foto7.jpg",
   "/images/kknt114/fotor.jpeg",
   "/images/kknt114/Foto9.jpg",
