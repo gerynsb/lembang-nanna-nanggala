@@ -314,7 +314,7 @@ export default function SectionAboutNanna() {
               {/* Description */}
               <div className="space-y-6">
                 <h4 className="text-2xl font-bold text-white mb-4">
-                  Tentang Dusun Buntu Palilli&apos;
+                  Tentang Dusun Palilli&apos;
                 </h4>
                 <p className="text-lg text-gray-300 leading-relaxed">
                   Dusun Palilli’ adalah dusun yang memiliki penduduk paling sedikit, tetapi pemandangan yang dimiliki di dusun ini tidak kalah indah dengan dusun lainnya. 
@@ -326,12 +326,12 @@ export default function SectionAboutNanna() {
             {/* Auto-sliding Gallery Dusun Buntu Palilli' */}
             <DraggableGallery 
               images={[
-                "/images/Palilli/palilligbr4.jpg",
-                "/images/Palilli/palilligbr5.jpg", 
-                "/images/Palilli/palilligbr6.jpg",
-                "/images/Palilli/palilligbr7.jpg"
+                "/images/Palilli/Palilligbr4.jpg",
+                "/images/Palilli/Palilligbr5.jpg", 
+                "/images/Palilli/Palilligbr6.jpg",
+                "/images/Palilli/Palilligbr7.jpg"
               ]}
-              title="Galeri Dokumentasi Dusun Buntu Palilli&apos;"
+              title="Galeri Dokumentasi Dusun Palilli&apos;"
             />
           </div>
 
